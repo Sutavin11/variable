@@ -38,6 +38,44 @@
                             <field name="VAR">LeftFrontObjectSensor</field>
                           </block>
                         </value>
+                        <next>
+                          <block type="variables_set" id="147" inline="true">
+                            <field name="VAR">RightFrontObjectSensor</field>
+                            <value name="VALUE">
+                              <block type="sensor_object" id="148">
+                                <field name="OBJECT">RIGHTFRONT</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="oled_setcursor" id="149" inline="true">
+                                <value name="STARTX">
+                                  <block type="math_number" id="150">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                                <value name="STARTY">
+                                  <block type="math_number" id="151">
+                                    <field name="NUM">20</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="oled_drawtext" id="152">
+                                    <field name="TEXT">Right Front</field>
+                                    <next>
+                                      <block type="oled_drawnumber" id="153" inline="true">
+                                        <value name="NUMBER">
+                                          <block type="variables_get" id="154">
+                                            <field name="VAR">RightFrontObjectSensor</field>
+                                          </block>
+                                        </value>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
                       </block>
                     </next>
                   </block>
